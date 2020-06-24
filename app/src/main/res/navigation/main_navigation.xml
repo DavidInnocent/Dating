@@ -119,11 +119,7 @@
         android:id="@+id/matchFragment"
         android:name="com.example.datingui.MatchFragment"
         android:label="fragment_match"
-        tools:layout="@layout/fragment_match" >
-        <action
-            android:id="@+id/action_matchFragment_to_textFragment"
-            app:destination="@id/textFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_match" />
     <fragment
         android:id="@+id/textFragment"
         android:name="com.example.datingui.TextFragment"
@@ -138,5 +134,9 @@
         android:id="@+id/matchesFragment"
         android:name="com.example.datingui.MatchesFragment"
         android:label="fragment_matches"
-        tools:layout="@layout/fragment_matches" />
+        tools:layout="@layout/fragment_matches" >
+        <action
+            android:id="@+id/action_matchesFragment_to_textFragment"
+            app:destination="@id/textFragment" />
+    </fragment>
 </navigation>
