@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnSettins"
+            android:id="@+id/btnSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
@@ -113,13 +113,13 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout2"
+                    android:id="@+id/btnToProfile"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/sskewed_background"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
+                    app:layout_constraintEnd_toStartOf="@+id/btnToDiscover"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +129,7 @@
                         android:id="@+id/imageView72"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                        android:src="@drawable/ic_baseline_person_24"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -147,14 +147,14 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout6"
+                    android:id="@+id/btnToDiscover"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout5"
+                    app:layout_constraintEnd_toStartOf="@+id/btnToMatches"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                    app:layout_constraintStart_toEndOf="@+id/btnToProfile"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
 
@@ -162,7 +162,7 @@
                         android:id="@+id/imageView7"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                        android:src="@drawable/ic_baseline_smartphone_24"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -180,13 +180,13 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout5"
+                    android:id="@+id/btnToMatches"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
+                    app:layout_constraintStart_toEndOf="@+id/btnToDiscover"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0">
 
@@ -194,7 +194,7 @@
                         android:id="@+id/imageView73"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                        android:src="@drawable/ic_baseline_menu_24"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
