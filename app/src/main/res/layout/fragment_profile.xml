@@ -4,19 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/photo"
+   android:background="@drawable/rsz_back_back"
+    android:backgroundTintMode="multiply"
     tools:context=".ProfileFragment">
 
-    <RatingBar
-        android:layout_width="229dp"
-        android:layout_height="46dp"
-        android:visibility="gone"
-        android:background="@color/colorWhite"
-        android:padding="0dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/back_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/back_back" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/back_back"
@@ -50,6 +42,7 @@
             android:layout_marginRight="48dp"
             android:backgroundTint="#000"
             android:clickable="true"
+            app:borderWidth="0dp"
             android:src="@drawable/ic_baseline_settings_24"
             app:layout_constraintBottom_toBottomOf="@+id/textView17"
             app:layout_constraintEnd_toEndOf="parent"
@@ -107,6 +100,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="104dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/skewed_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

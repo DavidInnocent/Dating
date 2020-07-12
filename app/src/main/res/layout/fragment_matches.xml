@@ -131,6 +131,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagesRecycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:paddingTop="48dp"

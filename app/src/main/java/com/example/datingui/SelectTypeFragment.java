@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 
+import com.example.datingui.databinding.FragmentSelectTypeBinding;
 import com.labo.kaji.fragmentanimations.MoveAnimation;
 
 /**
@@ -30,6 +31,7 @@ import com.labo.kaji.fragmentanimations.MoveAnimation;
 public class SelectTypeFragment extends Fragment {
 
     private NavController navController;
+    FragmentSelectTypeBinding binding;
 
     @Nullable
     @Override
@@ -37,16 +39,15 @@ public class SelectTypeFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         navController= Navigation.findNavController(container);
-        return inflater.inflate(R.layout.fragment_select_type, container, false);
+        binding=FragmentSelectTypeBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        CardView cardViewww=view.findViewById(R.id.cardViewww);
-        cardViewww.setOnClickListener(new View.OnClickListener() {
+        binding.btnProceedInterest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_selectTypeFragment_to_profileFragment);
@@ -62,5 +63,11 @@ public class SelectTypeFragment extends Fragment {
         } else {
             return MoveAnimation.create(MoveAnimation.DOWN, enter, 600);
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        binding=null;
     }
 }

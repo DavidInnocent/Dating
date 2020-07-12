@@ -105,7 +105,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton2"
             app:layout_constraintEnd_toStartOf="@+id/imageView6"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton2" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton2"
+            app:layout_constraintVertical_bias="0.32" />
 
         <TextView
             android:id="@+id/textView30"
@@ -116,7 +117,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton7"
             app:layout_constraintEnd_toStartOf="@+id/switch1"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton7"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton7" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton7"
+            app:layout_constraintVertical_bias="0.22000003" />
 
         <TextView
             android:id="@+id/textView31"
@@ -127,7 +129,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton8"
             app:layout_constraintEnd_toStartOf="@+id/switch2"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton8"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton8" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton8"
+            app:layout_constraintVertical_bias="0.24000001" />
 
         <TextView
             android:id="@+id/textView32"
@@ -138,7 +141,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton9"
             app:layout_constraintEnd_toStartOf="@+id/checkBox"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton9"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton9" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton9"
+            app:layout_constraintVertical_bias="0.17000002" />
 
         <TextView
             android:id="@+id/textView33"
@@ -216,7 +220,7 @@
             android:textColor="@color/colorWhite"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView377"
-            tools:layout_editor_absoluteX="32dp" />
+            app:layout_constraintStart_toStartOf="@+id/textView377" />
 
         <TextView
             android:id="@+id/textView377"

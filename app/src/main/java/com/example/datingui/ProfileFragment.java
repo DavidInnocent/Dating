@@ -49,7 +49,22 @@ public class ProfileFragment extends Fragment {
         binding.btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                navController.navigate();
+                navController.navigate(ProfileFragmentDirections.actionProfileFragmentToSettingsFragment());
+            }
+        });
+
+
+        binding.btnToMatches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(ProfileFragmentDirections.actionProfileFragmentToMatchesFragment());
+            }
+        });
+
+        binding.btnToDiscover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(ProfileFragmentDirections.actionProfileFragmentToMatchFragment());
             }
         });
     }
@@ -84,9 +99,9 @@ public class ProfileFragment extends Fragment {
     @Override
     public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
         if (enter) {
-            return MoveAnimation.create(MoveAnimation.UP, enter, 600);
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 800);
         } else {
-            return MoveAnimation.create(MoveAnimation.DOWN, enter, 600);
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 800);
         }
     }
 

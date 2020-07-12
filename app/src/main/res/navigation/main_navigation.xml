@@ -119,7 +119,14 @@
         android:id="@+id/matchFragment"
         android:name="com.example.datingui.MatchFragment"
         android:label="fragment_match"
-        tools:layout="@layout/fragment_match" />
+        tools:layout="@layout/fragment_match" >
+        <action
+            android:id="@+id/action_matchFragment_to_matchesFragment"
+            app:destination="@id/matchesFragment" />
+        <action
+            android:id="@+id/action_matchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
         android:id="@+id/textFragment"
         android:name="com.example.datingui.TextFragment"
@@ -138,5 +145,11 @@
         <action
             android:id="@+id/action_matchesFragment_to_textFragment"
             app:destination="@id/textFragment" />
+        <action
+            android:id="@+id/action_matchesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_matchesFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
     </fragment>
 </navigation>
