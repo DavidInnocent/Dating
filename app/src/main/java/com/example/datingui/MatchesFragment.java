@@ -2,63 +2,98 @@ package com.example.datingui;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.widget.LinearLayout;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MatchesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.datingui.databinding.FragmentMatchBinding;
+import com.example.datingui.databinding.FragmentMatchesBinding;
+import com.example.datingui.models.TextMessages;
+import com.example.datingui.util.MatchesAdapter;
+import com.labo.kaji.fragmentanimations.MoveAnimation;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MatchesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MatchesFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MatchesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MatchesFragment newInstance(String param1, String param2) {
-        MatchesFragment fragment = new MatchesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    FragmentMatchesBinding binding;
+    private NavController navController;
+    private MatchesAdapter adapter;
+    List<TextMessages> messages=new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        messages.add(new TextMessages("Sandra","1hr Ago","Good Morning David",R.drawable.rsz_images_two));
+        messages.add(new TextMessages("Jane Doe","1hr Ago","Good Morning David",R.drawable.rsz_images_one));
+        messages.add(new TextMessages("Doe Jane","1hr Ago","Good Morning David",R.drawable.rsz_1images_three));
+        messages.add(new TextMessages("David Innocent","1hr Ago","Good Morning David",R.drawable.rsz_images_five));
+        messages.add(new TextMessages("Innocent Arisa","1hr Ago","Good Morning David",R.drawable.rsz_lady));
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_matches, container, false);
+        navController= Navigation.findNavController(container);
+        binding= FragmentMatchesBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+
+        adapter=new MatchesAdapter(getContext(),messages);
+        binding.messagesRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.messagesRecycler.setHasFixedSize(true);
+        binding.messagesRecycler.setAdapter(adapter);
+
+
+
+        binding.btnToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(MatchesFragmentDirections.actionMatchesFragmentToProfileFragment());
+            }
+        });
+
+        binding.btnToDiscover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(MatchesFragmentDirections.actionMatchesFragmentToMatchFragment());
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        binding=null;
+    }
+
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        if (enter) {
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 800);
+        } else {
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 800);
+        }
     }
 }

@@ -33,17 +33,31 @@
             android:id="@+id/floatingActionButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:fabCustomSize="100dp"
-            app:maxImageSize="60dp"
-            android:elevation="16dp"
             android:backgroundTint="#000"
+            android:clickable="true"
+            android:elevation="16dp"
             android:src="@drawable/ic_female"
+            app:borderWidth="0dp"
+            app:fabCustomSize="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="60dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="84dp"
+            android:visibility="gone"
+            android:layout_height="84dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+            android:progress="90"
+            android:progressDrawable="@drawable/circular_2"
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton5"
+            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -75,6 +89,7 @@
             android:clickable="true"
             android:backgroundTint="@color/colorPrimary"
             app:fabCustomSize="100dp"
+            app:borderWidth="0dp"
             app:maxImageSize="60dp"
             android:src="@drawable/ic_male"
             app:layout_constraintBottom_toBottomOf="parent"

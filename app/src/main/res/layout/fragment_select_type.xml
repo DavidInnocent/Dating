@@ -258,7 +258,7 @@
                     android:id="@+id/imageVieww"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                    android:src="@drawable/ic_champagne_glass"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

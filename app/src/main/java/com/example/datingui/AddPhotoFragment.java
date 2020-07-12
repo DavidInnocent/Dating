@@ -29,6 +29,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.example.datingui.databinding.FragmentAddPhotoBinding;
 import com.example.datingui.util.ImageAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.labo.kaji.fragmentanimations.MoveAnimation;
@@ -40,6 +41,7 @@ public class AddPhotoFragment extends Fragment {
 
 
     private NavController navController;
+    FragmentAddPhotoBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,50 +56,45 @@ public class AddPhotoFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         navController= Navigation.findNavController(container);
 
-        return inflater.inflate(R.layout.fragment_add_photo, container, false);
+        binding=FragmentAddPhotoBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        RecyclerView recyclerView=view.findViewById(R.id.recyclerView);
 
-        ConstraintLayout constraintLayout3=view.findViewById(R.id.constraintLayout3);
-        constraintLayout3.setOnClickListener(new View.OnClickListener() {
+
+        binding.btnProceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_addPhotoFragment_to_selectTypeFragment);
             }
         });
 
-
-        Spinner spinner_age=view.findViewById(R.id.age);
-        Spinner spinner_height=view.findViewById(R.id.heightt);
-        Spinner spinner_weight=view.findViewById(R.id.weightt);
-
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.values_array,android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 
-        spinner_age.setAdapter(adapter);
-        spinner_height.setAdapter(adapter);
-        spinner_weight.setAdapter(adapter);
+        binding.age.setAdapter(adapter);
+        binding.heightt.setAdapter(adapter);
+        binding.weightt.setAdapter(adapter);
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(view.getContext());
         layoutManager.setOrientation(RecyclerView.HORIZONTAL);
-        recyclerView.setLayoutManager(layoutManager);
+        binding.recyclerView.setLayoutManager(layoutManager);
 
         List<Integer> images=new ArrayList<>();
-        images.add(R.drawable.images_one);
-        images.add(R.drawable.images_two);
-        images.add(R.drawable.images_three);
-        images.add(R.drawable.images_four);
+        images.add(R.drawable.rsz_images_one);
+        images.add(R.drawable.rsz_images_two);
+        images.add(R.drawable.rsz_1images_three);
+        images.add(R.drawable.rsz_images_four);
         ImageAdapter imageAdapter=new ImageAdapter(images,getContext());
         imageAdapter.setHasStableIds(true);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(imageAdapter);
+        binding.recyclerView.setHasFixedSize(true);
+        binding.recyclerView.setAdapter(imageAdapter);
 
     }
 
@@ -124,9 +121,15 @@ public class AddPhotoFragment extends Fragment {
     @Override
     public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
         if (enter) {
-            return MoveAnimation.create(MoveAnimation.UP, enter, 600);
+            return MoveAnimation.create(MoveAnimation.UP, enter, 800);
         } else {
             return MoveAnimation.create(MoveAnimation.DOWN, enter, 900);
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        binding=null;
     }
 }

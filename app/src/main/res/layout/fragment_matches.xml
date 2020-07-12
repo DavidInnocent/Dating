@@ -29,13 +29,13 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/btnToProfile"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
 
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
+                app:layout_constraintEnd_toStartOf="@+id/btnToDiscover"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
                     android:id="@+id/imageView72"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                    android:src="@drawable/ic_baseline_person_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -63,14 +63,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout6"
+                android:id="@+id/btnToDiscover"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/constraintLayout5"
+                app:layout_constraintEnd_toStartOf="@+id/btnToMatches"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toEndOf="@+id/btnToProfile"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0">
 
@@ -78,7 +78,7 @@
                     android:id="@+id/imageView7"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                    android:src="@drawable/ic_baseline_smartphone_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -96,14 +96,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout5"
+                android:id="@+id/btnToMatches"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/sskewed_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
+                app:layout_constraintStart_toEndOf="@+id/btnToDiscover"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0">
 
@@ -111,7 +111,7 @@
                     android:id="@+id/imageView73"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_baseline_emoji_food_beverage_24"
+                    android:src="@drawable/ic_baseline_menu_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -131,6 +131,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagesRecycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:paddingTop="48dp"
@@ -144,9 +145,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -154,14 +159,14 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHighlight="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
             android:drawableStart="@android:drawable/ic_menu_search"
             android:drawableLeft="@android:drawable/ic_menu_search"
             android:drawableEnd="@drawable/ic_baseline_filter_list_24"
             android:drawableRight="@drawable/ic_baseline_filter_list_24"
             android:hint="hintghvhghj"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
