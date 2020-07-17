@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.datingui.SplashFragment"
+        android:name="com.david.datingui.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.datingui.LoginFragment"
+        android:name="com.david.datingui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.datingui.RegisterFragment"
+        android:name="com.david.datingui.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotFragment"
-        android:name="com.example.datingui.ForgotFragment"
+        android:name="com.david.datingui.ForgotFragment"
         android:label="fragment_forgot"
         tools:layout="@layout/fragment_forgot" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/sentCodeFragment"
-        android:name="com.example.datingui.SentCodeFragment"
+        android:name="com.david.datingui.SentCodeFragment"
         android:label="fragment_sent_code"
         tools:layout="@layout/fragment_sent_code" >
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/genderFragment"
-        android:name="com.example.datingui.GenderFragment"
+        android:name="com.david.datingui.GenderFragment"
         android:label="fragment_gender"
         tools:layout="@layout/fragment_gender"
         app:startDestination="@id/action_genderFragment_to_addPhotoFragment">
@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/addPhotoFragment"
-        android:name="com.example.datingui.AddPhotoFragment"
+        android:name="com.david.datingui.addPhotoFragment"
         android:label="fragment_add_photo"
         tools:layout="@layout/fragment_add_photo" >
         <action
@@ -80,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectTypeFragment"
-        android:name="com.example.datingui.SelectTypeFragment"
+        android:name="com.david.datingui.SelectTypeFragment"
         android:label="fragment_select_type"
         tools:layout="@layout/fragment_select_type" >
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/interestsFragment"
-        android:name="com.example.datingui.InterestsFragment"
+        android:name="com.david.datingui.InterestsFragment"
         android:label="fragment_interests"
         tools:layout="@layout/fragment_interests" >
         <action
@@ -101,7 +101,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.datingui.ProfileFragment"
+        android:name="com.david.datingui.profileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile"
         app:startDestination="@id/action_profileFragment_to_matchFragment">
@@ -117,7 +117,7 @@
     </fragment>
     <fragment
         android:id="@+id/matchFragment"
-        android:name="com.example.datingui.MatchFragment"
+        android:name="com.david.datingui.MatchFragment"
         android:label="fragment_match"
         tools:layout="@layout/fragment_match" >
         <action
@@ -129,17 +129,17 @@
     </fragment>
     <fragment
         android:id="@+id/textFragment"
-        android:name="com.example.datingui.TextFragment"
+        android:name="com.david.datingui.TextFragment"
         android:label="fragment_text"
         tools:layout="@layout/fragment_text" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.datingui.SettingsFragment"
+        android:name="com.david.datingui.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/matchesFragment"
-        android:name="com.example.datingui.MatchesFragment"
+        android:name="com.david.datingui.MatchesFragment"
         android:label="fragment_matches"
         tools:layout="@layout/fragment_matches" >
         <action

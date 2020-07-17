@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
    android:background="@drawable/rsz_back_back"
     android:backgroundTintMode="multiply"
-    tools:context=".ProfileFragment">
+    tools:context=".profileFragment">
 
 
 
